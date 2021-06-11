@@ -1,0 +1,26 @@
+{
+  "name": "oj-shell",
+  "version": "1.0.1",
+  "homepage": "https://www.orange-juice.nl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orange-juice-nl/oj-shell.git"
+  },
+  "keywords": [
+    "shell",
+    "child_process",
+    "spawn"
+  ],
+  "description": "Node shell (child_process) helper",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc ./src/index.ts --lib esnext --declaration true --outDir ./dist --module commonjs --moduleResolution node --target es5",
+    "share": "npm upgrade && npm version patch -force && npm run build && npm publish --registry https://registry.npmjs.org"
+  },
+  "author": "Marius Linders @ Orange Juice<marius.linders@orange-juice.nl>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.3.1"
+  }
+}
